@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginController {
+public class LogoutController {
     public WebDriver driver;
     public WebDriverWait wait;
 
-    public LoginController(WebDriver driver){
+    public LogoutController(WebDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver,10);
     }
@@ -20,14 +20,9 @@ public class LoginController {
         waitVisibility(elementBy);
         driver.findElement(elementBy).click();
     }
-    public void writeText (By elementBy, String text) {
-        waitVisibility(elementBy);
-        driver.findElement(elementBy).sendKeys(text);
-    }
     public String getTextValidation (By elementBy){
         waitVisibility(elementBy);
         driver.findElement(elementBy).getText();
         return getTextValidation(elementBy);
     }
-
 }

@@ -5,11 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LoginController {
+public class EditController {
     public WebDriver driver;
     public WebDriverWait wait;
 
-    public LoginController(WebDriver driver){
+    public EditController(WebDriver driver){
         this.driver = driver;
         wait = new WebDriverWait(driver,10);
     }
@@ -29,5 +29,4 @@ public class LoginController {
         driver.findElement(elementBy).getText();
         return getTextValidation(elementBy);
     }
-
 }

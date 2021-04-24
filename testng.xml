@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="web-automation-test">
+    <test name="web-automation-login">
+        <parameter name="username" value=""/>
+        <parameter name="password" value=""/>
+        <classes>
+            <class name="Test.LoginTest"/>
+        </classes>
+    </test>
+    <test name="web-automation-create">
+        <parameter name="description" value=""/>
+        <parameter name="filename" value=""/>
+        <parameter name="summary" value=""/>
+        <classes>
+            <class name="Test.CreateGist"/>
+        </classes>
+    </test>
+    <test name="web-automation-edit">
+        <parameter name="textEdit" value=""/>
+        <classes>
+            <class name="Test.EditGist"/>
+        </classes>
+    </test>
+    <test name="web-automation-delete">
+        <parameter name="messageValidation" value=""/>
+        <classes>
+            <class name="Test.DeleteGist"/>
+        </classes>
+    </test>
+    <test name="web-automation-listAll">
+        <classes>
+            <class name="Test.ListGist"/>
+        </classes>
+    </test>
+    <test name="web-automation-listAll">
+        <classes>
+            <class name="Test.LogoutTest"/>
+        </classes>
+    </test>
+
+
+</suite>
