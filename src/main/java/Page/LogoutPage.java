@@ -14,16 +14,19 @@ public class LogoutPage extends LogoutController {
     By btnSignOut = By.xpath("//button[contains(text(),'Sign out')]");
     By btnSignOut2 = By.xpath("//body/div[5]/main[1]/div[1]/form[1]/input[2]");
 
-    public void click_button_iconlogout() {
+    public LogoutPage click_button_iconlogout() {
         click(iconLogout);
+        return this;
     }
 
-    public void click_button_signout1() {
+    public LogoutPage click_button_signout1() {
         click(btnSignOut);
+        return this;
     }
 
-    public void click_button_signout2() {
+    public LogoutPage click_button_signout2() {
         click(btnSignOut2);
+        return this;
     }
 
 }

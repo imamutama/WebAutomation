@@ -17,26 +17,36 @@ public class LoginPage extends LoginController {
     By btnLogin = By.xpath("//body/div[4]/main[1]/div[1]/div[4]/form[1]/div[1]/input[12]");
     By validationtext = By.xpath("//strong[contains(text(),'GitHub')]");
 
-    public void click_btn_sign() {
-        click(btnSignIn);
+    public LoginPage goToWeb(String baseURL) {
+        driver.get(baseURL);
+        return this;
     }
 
-    public void validationText(String textValidation) {
+    public LoginPage click_btn_sign() {
+        click(btnSignIn);
+        return this;
+    }
+
+    public LoginPage validationText(String textValidation) {
         String textVld = getTextValidation(validationtext);
         if (textVld.contains(textValidation)) {
             System.out.println("Matching Text");
         }
+        return this;
     }
 
-    public void input_username(String username) {
+    public LoginPage input_username(String username) {
         writeText(userName, username);
+        return this;
     }
 
-    public void input_password(String password) {
+    public LoginPage input_password(String password) {
         writeText(passwordText, password);
+        return this;
     }
 
-    public void click_btn_login() {
+    public LoginPage click_btn_login() {
         click(btnLogin);
+        return this;
     }
 }

@@ -14,12 +14,14 @@ public class ListPage extends ListController {
     By allList = By.linkText("All gists");
     By validation = By.xpath("//body/div[5]/div[1]/main[1]/div[2]");
 
-    public void click_button_alllist() {
+    public ListPage click_button_alllist() {
         click(allList);
+        return this;
     }
 
-    public void validationNotNull() {
+    public ListPage validationNotNull() {
         String validationTrue = getTextValidation(validation);
         Assert.assertTrue(validationTrue != null);
+        return this;
     }
 }

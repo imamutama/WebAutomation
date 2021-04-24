@@ -18,30 +18,35 @@ public class CreatePage extends CreateController {
     By btnCreate = By.xpath("//button[contains(text(),'Create secret gist')]");
     By validation = By.xpath("//td[@id='file-automation-test-LC1']");
 
-    public void click_button_plus() {
+    public CreatePage click_button_plus() {
         click(createGist);
+        return this;
     }
 
-    public void input_description_gist(String textDescription) {
+    public CreatePage input_description_gist(String textDescription) {
         writeText(gitsDescription, "textDescription");
+        return this;
     }
 
-    public void input_filename_gist(String textFileName) {
+    public CreatePage input_filename_gist(String textFileName) {
         writeText(gitFile, textFileName);
-
+        return this;
     }
 
-    public void input_summary_gist(String textSummary) {
+    public CreatePage input_summary_gist(String textSummary) {
         writeText(gitsText, textSummary);
+        return this;
     }
 
-    public void click_button_creategist() {
+    public CreatePage click_button_creategist() {
         click(btnCreate);
+        return this;
     }
 
-    public void validation_file(String validFile) {
+    public CreatePage validation_file(String validFile) {
         String assertFile = getTextValidation(validation);
         Assert.assertEquals(assertFile, validFile);
+        return this;
     }
 }
 

@@ -16,20 +16,24 @@ public class EditPage extends EditController {
     By btnEditText = By.xpath("//button[contains(text(),'Update secret gist')]");
     By validation = By.xpath("//td[@id='file-automation-test-LC1']");
 
-    public void click_button_edit() {
+    public EditPage click_button_edit() {
         click(btnEdit);
+        return this;
     }
 
-    public void edit_text_gist(String stringText) {
+    public EditPage edit_text_gist(String stringText) {
         writeText(editText, stringText);
+        return this;
     }
 
-    public void click_button_update_gist() {
+    public EditPage click_button_update_gist() {
         click(btnEditText);
+        return this;
     }
 
-    public void validation_edit(String stringValidation) {
+    public EditPage validation_edit(String stringValidation) {
         getTextValidation(validation);
         Assert.assertEquals(validation, stringValidation);
+        return this;
     }
 }
